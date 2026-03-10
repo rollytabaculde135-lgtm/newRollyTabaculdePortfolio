@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <div class="logo">MyPortfolio</div>
+            <ul class="nav-links">
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#projects">PROJECTS</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#contacts">CONTACTS</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+    <section id="home">
+        <div class="hero">
+            <img src="rolly.jpg" alt="Rolly's Profile Picture" class="hero-img">
+            <h1>Hello, I'm <span class="highlight">Rolly</span></h1>
+            <p>Computer Science Student @Nemsu-LC</p>
+        </div>
+    </section>
+    
+<div id="mediaModal" class="modal">
+    <div id="modalContent" class="modal-content">
+        <span class="close">&times;</span>
+        <span class="prev">&#10094;</span>
+        <span class="next">&#10095;</span>
+        <!-- Media (img/video/iframe) will be injected here -->
+    </div>
+</div>
+            <section id="projects">
+                <h2>Projects</h2>
+        <div class="project-cards">
+
+            <div class="card" data-media="multimed.jpg">
+                <h3>Multimedia Project</h3>
+                <h4>Photoshop</h4>
+                <p>We try to copy the design based on the picture.</p>
+            </div>
+
+            <div class="card" data-media="emb.png,emb2.jpg">
+                <h3>Embedded Project</h3>
+                <h4>Robot</h4>
+                <p>Collaboratively assembling a 4WD robotic car with mechanical arm.</p>
+            </div>
+
+            <div class="card" data-media="intermed.jpg">
+                <h3>Intermediate Programming Project</h3>
+                <h4>Bubble Sort vs Bucket Sort</h4>
+                <p>We compare the two sorting algorithms</p>
+            </div>
+
+            <div class="card" data-media="https://www.youtube.com/watch?v=zjHs2fUSL4E,entrep.png">
+                <h3>Entrep Project</h3>
+                <h4>Startup : Prototype</h4>
+                <p>Soil Degradation : Smart Soil Care App</p>
+            </div>
+
+            <div class="card" data-media="java.png">
+                <h3>OOP Project</h3>
+                <h4>Java : Jokebot</h4>
+                <p>This Jokebot is about Computer Programmer Jokes.</p>
+            </div>
+
+        </div>
+            </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+           <img src="rolly1.jpg" alt="Profile Picture" class="about-img">
+            <div class="about-text">
+                <p>I am someone who believes in living life according to what I truly want, 
+                    choosing the things that genuinely make me happy and fulfilled. 
+                    I enjoy exploring new interests, learning new skills, and appreciating simple, peaceful moments. 
+                    I value personal growth, positive energy, and meaningful connections with the people around me. I believe that life is not about pleasing everyone, but about staying true to yourself and following your own path. For me, happiness comes from being authentic, embracing who I am, and confidently choosing what feels right for me.</p>
+            </div>
+        </div>
+    </section>
+
+<section id="contacts">
+    <h2>Contact Me</h2>
+    <div class="contact-cards-container">
+
+        <div class="contact-card">
+            <img src="email1.png" alt="Email">
+        </div>
+
+        <div class="contact-card">
+            <img src="call1.png" alt="Phone">
+        </div>
+
+        <div class="contact-card">
+            <img src="fb.png" alt="Facebook">
+        </div>
+
+        <div class="contact-card">
+            <img src="ig1.png" alt="Instagram">
+        </div>
+
+    </div>
+</section>
+
+    <footer>
+        <p>&copy; 2026 Rolly. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
