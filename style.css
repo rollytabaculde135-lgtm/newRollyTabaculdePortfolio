@@ -205,7 +205,7 @@ section h2 {
 
 .about-content img,
 .about-img {
-    width: 500px;
+    width: 250px;
     height: 250px;
     border-radius: 50%;
     object-fit: cover;
@@ -337,4 +337,5 @@ section h2 {
 .close, .prev, .next {
     z-index: 5;          /* above media */
     pointer-events: auto;
+
 }
