@@ -3,13 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <meta name="description" content="Personal portfolio website of Rolly, Computer Science Student at NEMSU-LC showcasing web development, embedded, and multimedia projects.">
+    <title>My Portfolio - Rolly</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <!-- Skip Link for Keyboard Navigation (Operable) -->
+    <a class="skip-link" href="#main">Skip to main content</a>
+
     <header>
-        <nav id="navbar">
+        <nav id="navbar" aria-label="Main Navigation">
             <div class="logo">MyPortfolio</div>
             <ul class="nav-links">
                 <li><a href="#home">HOME</a></li>
@@ -19,96 +24,103 @@
             </ul>
         </nav>
     </header>
-    
 
-    <section id="home">
-        <div class="hero">
-            <img src="rolly.jpg" alt="Rolly's Profile Picture" class="hero-img">
-            <h1>Hello, I'm <span class="highlight">Rolly</span></h1>
-            <p>Computer Science Student @Nemsu-LC</p>
+    <main id="main">
+
+        <!-- Home Section -->
+        <section id="home" aria-labelledby="home-heading">
+            <div class="hero">
+                <img src="rolly.jpg" alt="Portrait photo of Rolly" class="hero-img">
+                <h1 id="home-heading">Hello, I'm <span class="highlight">Rolly</span></h1>
+                <p>Computer Science Student @Nemsu-LC</p>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" aria-labelledby="projects-heading">
+            <h2 id="projects-heading">Projects</h2>
+            <div class="project-cards">
+
+                <div class="card" tabindex="0" role="button" aria-haspopup="dialog" data-media="multimed.jpg" aria-label="Multimedia Project: Photoshop">
+                    <h3>Multimedia Project</h3>
+                    <h4>Photoshop</h4>
+                    <p>We try to copy the design based on the picture.</p>
+                </div>
+
+                <div class="card" tabindex="0" role="button" aria-haspopup="dialog" data-media="emb.png,emb2.jpg" aria-label="Embedded Project: Robot">
+                    <h3>Embedded Project</h3>
+                    <h4>Robot</h4>
+                    <p>Collaboratively assembling a 4WD robotic car with mechanical arm.</p>
+                </div>
+
+                <div class="card" tabindex="0" role="button" aria-haspopup="dialog" data-media="intermed.jpg" aria-label="Intermediate Programming Project: Bubble Sort vs Bucket Sort">
+                    <h3>Intermediate Programming Project</h3>
+                    <h4>Bubble Sort vs Bucket Sort</h4>
+                    <p>We compare the two sorting algorithms</p>
+                </div>
+
+                <div class="card" tabindex="0" role="button" aria-haspopup="dialog" data-media="https://www.youtube.com/watch?v=zjHs2fUSL4E,entrep.png" aria-label="Entrep Project: Startup Prototype">
+                    <h3>Entrep Project</h3>
+                    <h4>Startup : Prototype</h4>
+                    <p>Soil Degradation : Smart Soil Care App</p>
+                </div>
+
+                <div class="card" tabindex="0" role="button" aria-haspopup="dialog" data-media="java.png" aria-label="OOP Project: Java Jokebot">
+                    <h3>OOP Project</h3>
+                    <h4>Java : Jokebot</h4>
+                    <p>This Jokebot is about Computer Programmer Jokes.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" aria-labelledby="about-heading">
+            <h2 id="about-heading">About Me</h2>
+            <div class="about-content">
+                <img src="rolly1.jpg" alt="Profile picture of Rolly" class="about-img">
+                <div class="about-text">
+                    <p>I am someone who believes in living life according to what I truly want, choosing the things that genuinely make me happy and fulfilled. I enjoy exploring new interests, learning new skills, and appreciating simple, peaceful moments. I value personal growth, positive energy, and meaningful connections with the people around me. I believe that life is not about pleasing everyone, but about staying true to yourself and following your own path. For me, happiness comes from being authentic, embracing who I am, and confidently choosing what feels right for me.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacts Section -->
+        <section id="contacts" aria-labelledby="contacts-heading">
+            <h2 id="contacts-heading">Contact Me</h2>
+            <div class="contact-cards-container">
+
+                <a href="mailto:example@domain.com" class="contact-card" aria-label="Send email to Rolly">
+                    <img src="email1.png" alt="Email Icon">
+                </a>
+
+                <a href="tel:+1234567890" class="contact-card" aria-label="Call Rolly by phone">
+                    <img src="call1.png" alt="Phone Icon">
+                </a>
+
+                <a href="https://facebook.com" class="contact-card" aria-label="Visit Rolly's Facebook profile" target="_blank" rel="noopener noreferrer">
+                    <img src="fb.png" alt="Facebook Icon">
+                </a>
+
+                <a href="https://instagram.com" class="contact-card" aria-label="Visit Rolly's Instagram profile" target="_blank" rel="noopener noreferrer">
+                    <img src="ig1.png" alt="Instagram Icon">
+                </a>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Modal Dialog for Media Viewing (Robust & Operable) -->
+    <div id="mediaModal" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modalTitle">
+        <div id="modalContent" class="modal-content">
+            <h3 id="modalTitle" class="sr-only">Project Media Viewer</h3>
+            <button class="close" aria-label="Close project viewer">&times;</button>
+            <button class="prev" aria-label="Previous image">&#10094;</button>
+            <button class="next" aria-label="Next image">&#10095;</button>
+            <!-- Media (img/video/iframe) will be injected here -->
         </div>
-    </section>
-    
-<div id="mediaModal" class="modal">
-    <div id="modalContent" class="modal-content">
-        <span class="close">&times;</span>
-        <span class="prev">&#10094;</span>
-        <span class="next">&#10095;</span>
-        <!-- Media (img/video/iframe) will be injected here -->
     </div>
-</div>
-            <section id="projects">
-                <h2>Projects</h2>
-        <div class="project-cards">
-
-            <div class="card" data-media="multimed.jpg">
-                <h3>Multimedia Project</h3>
-                <h4>Photoshop</h4>
-                <p>We try to copy the design based on the picture.</p>
-            </div>
-
-            <div class="card" data-media="emb.png,emb2.jpg">
-                <h3>Embedded Project</h3>
-                <h4>Robot</h4>
-                <p>Collaboratively assembling a 4WD robotic car with mechanical arm.</p>
-            </div>
-
-            <div class="card" data-media="intermed.jpg">
-                <h3>Intermediate Programming Project</h3>
-                <h4>Bubble Sort vs Bucket Sort</h4>
-                <p>We compare the two sorting algorithms</p>
-            </div>
-
-            <div class="card" data-media="https://www.youtube.com/watch?v=zjHs2fUSL4E,entrep.png">
-                <h3>Entrep Project</h3>
-                <h4>Startup : Prototype</h4>
-                <p>Soil Degradation : Smart Soil Care App</p>
-            </div>
-
-            <div class="card" data-media="java.png">
-                <h3>OOP Project</h3>
-                <h4>Java : Jokebot</h4>
-                <p>This Jokebot is about Computer Programmer Jokes.</p>
-            </div>
-
-        </div>
-            </section>
-
-    <section id="about">
-        <h2>About Me</h2>
-        <div class="about-content">
-           <img src="rolly1.jpg" alt="Profile Picture" class="about-img">
-            <div class="about-text">
-                <p>I am someone who believes in living life according to what I truly want, 
-                    choosing the things that genuinely make me happy and fulfilled. 
-                    I enjoy exploring new interests, learning new skills, and appreciating simple, peaceful moments. 
-                    I value personal growth, positive energy, and meaningful connections with the people around me. I believe that life is not about pleasing everyone, but about staying true to yourself and following your own path. For me, happiness comes from being authentic, embracing who I am, and confidently choosing what feels right for me.</p>
-            </div>
-        </div>
-    </section>
-
-<section id="contacts">
-    <h2>Contact Me</h2>
-    <div class="contact-cards-container">
-
-        <div class="contact-card">
-            <img src="email1.png" alt="Email">
-        </div>
-
-        <div class="contact-card">
-            <img src="call1.png" alt="Phone">
-        </div>
-
-        <div class="contact-card">
-            <img src="fb.png" alt="Facebook">
-        </div>
-
-        <div class="contact-card">
-            <img src="ig1.png" alt="Instagram">
-        </div>
-
-    </div>
-</section>
 
     <footer>
         <p>&copy; 2026 Rolly. All Rights Reserved.</p>
